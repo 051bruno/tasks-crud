@@ -1,0 +1,14 @@
+# Ignorar dependências e builds do Angular (frontend)
+Angular/MeuProjetoCrudAngular/node_modules/
+Angular/MeuProjetoCrudAngular/dist/
+
+# Ignorar builds e arquivos temporários do ASP.NET (backend)
+ASPNet/MeuProjetoCrudAPI/bin/
+ASPNet/MeuProjetoCrudAPI/obj/
+ASPNet/MeuProjetoCrudAPI/*.user
+ASPNet/MeuProjetoCrudAPI/*.suo
+
+# Outras exclusões gerais
+*.log
+*.tmp
+*.vs
