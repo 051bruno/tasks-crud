@@ -7,9 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MeuProjetoCrudAPI.Data;
 using MeuProjetoCrudAPI.Models;
-using static System.Collections.Specialized.BitVector32;
 using System.Net;
-using Swashbuckle.Swagger.Annotations;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace MeuProjetoCrudAPI.Controllers
 {
@@ -92,45 +91,32 @@ namespace MeuProjetoCrudAPI.Controllers
 
         // POST: api/Tasks
         [HttpPost]
-        [SwaggerResponse(HttpStatusCode.Created, "Tarefa criada com sucesso.")]
-        [SwaggerResponse(HttpStatusCode.BadRequest, "Erro de parâmetros.")]
-        [SwaggerResponse(HttpStatusCode.InternalServerError, "Erro de servidor.")]
+        [SwaggerResponse((int)HttpStatusCode.Created, "Tarefa criada com sucesso.")]
+        [SwaggerResponse((int)HttpStatusCode.BadRequest, "Erro de parâmetros.")]
+        [SwaggerResponse((int)HttpStatusCode.InternalServerError, "Erro de servidor.")]
         public async Task<ActionResult<TaskModel>> PostTaskModel(TaskModel taskModel)
         {
-            var ret = new ret_taskModel()
+            if (taskModel == null || string.IsNullOrEmpty(taskModel.NomeTask) || string.IsNullOrEmpty(taskModel.DescricaoTask))
             {
-                Error = false,
-                ErrorMessage = string.Empty
-            };
+                return BadRequest(new { Error = true, ErrorMessage = "Campos obrigatórios não preenchidos." });
+            }
 
             try
             {
-                // Verificação ou validação dos dados da tarefa
-                if (taskModel == null || string.IsNullOrEmpty(taskModel.NomeTask) || string.IsNullOrEmpty(taskModel.DescricaoTask))
-                {
-                    ret.Error = true;
-                    ret.ErrorMessage = "Campos obrigatórios não preenchidos.";
-                    return BadRequest(ret);  // Retorna erro 400 com a mensagem de erro
-                }
-
                 // Criação da tarefa
                 _context.Tasks.Add(taskModel);
                 await _context.SaveChangesAsync();
 
                 // Retorno com a tarefa criada
-                return CreatedAtAction("GetTaskModel", new { id = taskModel.Id }, taskModel);
+                return CreatedAtAction(nameof(GetTaskModel), new { id = taskModel.Id }, taskModel);
             }
             catch (DbUpdateException)
             {
-                ret.Error = true;
-                ret.ErrorMessage = "Erro ao salvar a tarefa no banco de dados.";
-                return StatusCode((int)HttpStatusCode.InternalServerError, ret); // Retorna erro 500 com mensagem
+                return StatusCode((int)HttpStatusCode.InternalServerError, new { Error = true, ErrorMessage = "Erro ao salvar a tarefa no banco de dados." });
             }
             catch (Exception ex)
             {
-                ret.Error = true;
-                ret.ErrorMessage = ex.Message;
-                return BadRequest(ret);  // Retorna erro 400 com a mensagem de erro genérica
+                return StatusCode((int)HttpStatusCode.InternalServerError, new { Error = true, ErrorMessage = ex.Message });
             }
         }
 
