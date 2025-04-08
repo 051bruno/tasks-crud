@@ -1,4 +1,4 @@
-# Meu Projeto CRUD - Angular + ASP.NET Core
+# Meu Projeto CRUD - C# .NET + Angular + ASP.NET Core
 
 Este é um projeto CRUD básico para o gerenciamento de tarefas, composto por uma aplicação **frontend** em **Angular 18** com **Bootstrap 5.0** e um **backend** em **ASP.NET Core 8.0** utilizando o Entity Framework Core para gerenciamento do banco de dados.
 
