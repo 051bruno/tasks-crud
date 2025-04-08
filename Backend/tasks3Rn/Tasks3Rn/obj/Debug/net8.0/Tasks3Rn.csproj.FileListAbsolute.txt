@@ -1,0 +1,13 @@
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\bin\Debug\net8.0\Tasks3Rn.deps.json
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\bin\Debug\net8.0\Tasks3Rn.dll
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\bin\Debug\net8.0\Tasks3Rn.pdb
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\obj\Debug\net8.0\Tasks3Rn.csproj.AssemblyReference.cache
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\obj\Debug\net8.0\Tasks3Rn.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\obj\Debug\net8.0\Tasks3Rn.AssemblyInfoInputs.cache
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\obj\Debug\net8.0\Tasks3Rn.AssemblyInfo.cs
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\obj\Debug\net8.0\Tasks3Rn.csproj.CoreCompileInputs.cache
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\obj\Debug\net8.0\Tasks3Rn.sourcelink.json
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\obj\Debug\net8.0\Tasks3Rn.dll
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\obj\Debug\net8.0\refint\Tasks3Rn.dll
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\obj\Debug\net8.0\Tasks3Rn.pdb
+C:\Projetos\TasksManagement_Angular_CSharp\Backend\tasks3Rn\Tasks3Rn\obj\Debug\net8.0\ref\Tasks3Rn.dll
