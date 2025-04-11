@@ -5,7 +5,7 @@ Este é um projeto CRUD básico para o gerenciamento de tarefas, composto por um
 ## Tecnologias Utilizadas
 
 - **Frontend:** Angular 18, Bootstrap 5.0  
-- **Backend:** ASP.NET Core 8.0, Entity Framework Core  
+- **Backend:**.NET 8, ASP.NET Core 8.0, Entity Framework Core  
 - **.NET SDK:** 8.0.403  
 - **Runtime do ASP.NET Core:** 8.0.10  
 - **.NET Core Runtime:** Versões 6.0.x e 8.0.x (o runtime ativo é 8.0.11, conforme especificado no ambiente)
